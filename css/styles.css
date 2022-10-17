@@ -72,6 +72,7 @@ header>.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 80px;
 }
 
 li {
@@ -387,13 +388,27 @@ nav {
     border-bottom: 4px var(--color-logo);
 }
 
+.link::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: calc(100% + 28px);
+    width: 100%;
+    background-color: var(--color-logo);
+    height: 4px;
+    border-radius: 2px;
+    opacity: 0;
+}
+
+.link:hover::after,
+.link:focus::after {
+    opacity: 1;
+}
+
 .links {
     display: flex;
     align-items: center;
     margin-left: 93px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
 }
 
 .links>li:not(:last-child) {
@@ -415,8 +430,6 @@ nav {
     text-align: right;
     letter-spacing: 0.03em;
     color: var(--color-logo);
-    padding-top: 24px;
-    padding-bottom: 25px;
 }
 
 .logo:active,
