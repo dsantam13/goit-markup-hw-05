@@ -110,6 +110,24 @@ nav {
     background-repeat: no-repeat;
 }
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .button {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -232,6 +250,22 @@ nav {
 
 .descriptions>li {
     width: 270px;
+}
+
+.exit-modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background-color: var(--text-banner);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .filters {
@@ -383,6 +417,15 @@ nav {
 .logo:active,
 .logo:visited {
     color: var(--color-logo);
+}
+
+.modal {
+    position: relative;
+    width: 528px;
+    height: 581px;
+    background-color: var(--text-banner);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 .name {
