@@ -385,7 +385,6 @@ nav {
 .link:hover,
 .link:focus {
     color: var(--color-logo);
-    border-bottom: 4px var(--color-logo);
 }
 
 .link::after {
